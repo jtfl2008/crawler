@@ -26,8 +26,11 @@
     }
   },
   "dependencies": {
+    "jsonwebtoken": "^8.4.0",
     "koa": "^2.6.2",
     "koa-bodyparser": "^4.2.1",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.4.0",
+    "puppeteer": "^1.11.0"
   }
 }
