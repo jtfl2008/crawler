@@ -10,7 +10,7 @@ module.exports = (app) => {
   router.post('/test', crawle.test),
 
   // 登录
-  router.get('/login', login.login),
+  router.post('/login', login.login),
   router.get('/userin', login.userin)
   
 
