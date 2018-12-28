@@ -15,4 +15,4 @@
     如果从请求头信息中拿到的 token 有效，允许用户访问受限制的后端服务器，并且返回 JSON 或者 XML。
     在这个例子中，我们没有返回的 session 或者 cookie，并且我们没有返回任何 HTML 内容。那意味着我们可以把这个架构应用于特定应用的所有客户端中。你可以看一下面的架构体系：
 
-![参考]: (https://pic3.zhimg.com/80/0d018270d567ae23a87c3c33b12ea43e_hd.jpg)
+![参考](https://pic3.zhimg.com/80/0d018270d567ae23a87c3c33b12ea43e_hd.jpg)
