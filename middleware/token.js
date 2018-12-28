@@ -1,6 +1,6 @@
 module.exports = async (ctx, next) => {
     let path = ctx.path;
-    if(path == '/login' || path == '/' || path == '/userin' || path == '/favicon.ico'){
+    if(path == '/login' || path == '/' || path == '/userin' || path == '/favicon.ico' || path == '/upload'){
         await next();
     }else if(ctx.header.authorization == undefined){
         ctx.body = {

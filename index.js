@@ -5,9 +5,13 @@ const cors = require('koa2-cors');
 const token = require('./middleware/token')
 
 const app = new Koa()
+
 app.use(cors());
+
 app.use(token);
-app.use(bodyParser())
+
+app.use(bodyParser());
+
 router(app)
 
 app.listen(3000, () => {
