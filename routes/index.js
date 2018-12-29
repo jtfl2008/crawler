@@ -1,8 +1,8 @@
 'use strict'
 const router = require('koa-router')()
-const crawlers = require('./crawlers')
-const login = require('./login')
-const upload = require('./upload')
+const crawlers = require('../controller/crawlers')
+const login = require('../controller/login')
+const upload = require('../controller/upload')
 
 module.exports = (app) => {
   router.get('/', (ctx, next) => {
