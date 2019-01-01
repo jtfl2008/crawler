@@ -17,10 +17,10 @@ module.exports = {
       }
     },
     async test (ctx, next) {
-        let data = ctx.request.body
+        qiniu.upload('aa.png','http://fj.kanmengmei.com/2018/3052/10-gs.jpg');
         ctx.body = {
             status: 200,
-            data: data
+            data: 'data'
         }
     }
 }

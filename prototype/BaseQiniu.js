@@ -22,16 +22,10 @@ let putExtra = new qiniu.form_up.PutExtra();
 
 class BaseQiniu {
     constructor () {
-        this.upload = this.upload.bind(this)
+        this.upload = this.upload.bind(this);
     }
-    async upload (key, url) {
-        let stream;
-        try {
-            stream = getUrl(url);
-        } catch (error) {
-            throw error;
-        }
-        formUploader.putStream(uploadToken, key, stream, putExtra, function(respErr,respBody, respInfo) {
+    async upload (key, buffer) {
+        formUploader.put(uploadToken, key, buffer, putExtra, function(respErr,respBody, respInfo) {
             if (respErr) {
                 throw respErr;
             }
@@ -42,18 +36,6 @@ class BaseQiniu {
                 console.log(respBody);
             }
         });
-    }
-    // 用 axios 获取图片的二进制流
-    async getUrl (url) {
-        let stream;
-        await axios({
-            method:'get',
-            url: url,
-            responseType:'stream'
-        }).then(function(res) {
-            stream = res.data;
-        });
-        return stream;
     }
 
 }       

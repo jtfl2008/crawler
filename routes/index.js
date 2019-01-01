@@ -14,7 +14,9 @@ module.exports = (app) => {
   router.post('/login', login.login);
   router.get('/userin', login.userin);
 
-  router.get('/upload', upload.upload);
+  router.get('/upload', crawlers.test);
+
+
   
 
   app
