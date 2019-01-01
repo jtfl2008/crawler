@@ -2,7 +2,6 @@
 const router = require('koa-router')()
 const crawlers = require('../controller/crawlers')
 const login = require('../controller/login')
-const upload = require('../controller/upload')
 
 module.exports = (app) => {
   router.get('/', (ctx, next) => {
