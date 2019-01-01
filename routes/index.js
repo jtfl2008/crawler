@@ -9,7 +9,7 @@ module.exports = (app) => {
     ctx.body = '<a href="https://github.com/yangcecode/crawler">Github</a>'
   });
   router.get('/getphoto', crawlers.index);
-
+  router.get('/getphotoInfo', crawlers.getUrlInfo);
   // 登录
   router.post('/login', login.login);
   router.get('/userin', login.userin);

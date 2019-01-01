@@ -9,6 +9,13 @@ module.exports = {
             title: girlList
         }
     },
+    async getUrlInfo (ctx, next) {
+      let urlInfo = await qiniu.getUrlInfo('http://www.99mm.me/qingchun/3052.html');
+      ctx.body = {
+        status:200,
+        info: urlInfo
+      }
+    },
     async test (ctx, next) {
         let data = ctx.request.body
         ctx.body = {
