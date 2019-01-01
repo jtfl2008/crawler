@@ -2,7 +2,7 @@
 ### 数据库
     数据库选用 mongodb，因为以后数据库肯定需要变所以选择mongodb，打算以后引入 redis。还有写 node 当然用mongodb。
 ### 图片存储
-    使用 axios 获取网上图片资源，选择了七牛云对象存储。
+    开始打算用 axios 请求图片数据存进七牛云，可是一直 403 拒绝我访问，只能换个方案了。
 ### 登录使用 token验证
     使用 jsonwebtoken 来生成 token。在基于 token 的认证里，不再使用 cookie 和session。token 可被用于在每次向服务器请求时认证用户。我们使用基于         token 的认证来重新设计刚才的设想。
 
